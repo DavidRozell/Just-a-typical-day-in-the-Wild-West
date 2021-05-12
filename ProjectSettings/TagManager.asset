@@ -9,6 +9,9 @@ TagManager:
   - RHand
   - Bullet
   - Target
+  - Ground
+  - Cactus
+  - player
   layers:
   - Default
   - TransparentFX

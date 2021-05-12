@@ -6,7 +6,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerController : MonoBehaviour
 {
-    XRIDefaultInputActions controller;
+    /*XRIDefaultInputActions controller;
     public Material selected;
     public Material normal;
     public GameObject gun;
@@ -17,39 +17,39 @@ public class PlayerController : MonoBehaviour
     public bool isHoldingGun = false;
     public bool pickingUpCooldown;
     private float bulletSpeed = 20f;
-    private float detectionradius = 0.6f;
+    private float detectionradius = 0.6f;*/
 
     private void Awake()
     {
-        controller = new XRIDefaultInputActions();
+        /*controller = new XRIDefaultInputActions();
         controller.XRIRightHand.PickUp.performed += ctx => PickUp();
         controller.XRIRightHand.Drop.performed += ctx => Drop();
-        controller.XRIRightHand.Shoot.performed += ctx => Shoot();
+        controller.XRIRightHand.Shoot.performed += ctx => Shoot();*/
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        RHand = GameObject.Find("RHand");
+        /*RHand = GameObject.Find("RHand");
         gun = GameObject.Find("Gun");
         gunHoldPos = GameObject.Find("GunHoldPos");
-        bulletStartPos = GameObject.Find("BulletStartPos");
+        bulletStartPos = GameObject.Find("BulletStartPos");*/
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(RHand.transform.position, gun.gameObject.transform.position) <= detectionradius & isHoldingGun == false & pickingUpCooldown == false)
+        /*if (Vector3.Distance(RHand.transform.position, gun.gameObject.transform.position) <= detectionradius & isHoldingGun == false & pickingUpCooldown == false)
         {
             gun.gameObject.GetComponent<Renderer>().material = selected;
         }
         if (Vector3.Distance(RHand.transform.position, gun.gameObject.transform.position) > detectionradius | isHoldingGun == true)
         {
             gun.gameObject.GetComponent<Renderer>().material = normal;
-        }
+        }*/
     }
 
-    void PickUp()
+    /*void PickUp()
     {
         if (isHoldingGun == false & pickingUpCooldown == false & Vector3.Distance(RHand.gameObject.transform.position, gun.gameObject.transform.position) <= detectionradius)
         {
@@ -97,5 +97,5 @@ public class PlayerController : MonoBehaviour
     void OnDisable()
     {
         controller.XRIRightHand.Disable();
-    }
+    }*/
 }
